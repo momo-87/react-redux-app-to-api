@@ -14,7 +14,7 @@ const FetchedUsers = () => {
       {isLoading ? <p>Loading...</p> : undefined}
       {error ? <p>{error}</p> : undefined}
       {userItems.map((user) => (
-        <ul key={user.id.value}>
+        <ul key={user.id.name}>
           <li>{user.name.first}</li>
           <li>{user.name.last}</li>
         </ul>

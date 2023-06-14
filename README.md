@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<div align="center">
+  <img src="./photo.png" alt="photo" width="80"/>
+  <img src="./intro.png" alt="logo"/>
+  <br/>
+  
+  <h2><b>Connect React & Redux app to API</b></h2>
+</div>
+
+# 📖 connect React & Redux app to API <a name="Redux Toolkit"></a>
+>Connect an existing API via Redux and use the data to display something in a UI.
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
