@@ -1,12 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
+export const fetchUsers = createAsyncThunk('users/fetchUsers', async (rejectWithValue) => {
   try {
     const response = await fetch('https://randomuser.me/api/?results=5');
     return response.json();
   } catch (error) {
-    const rejectWithValue = error.message;
-    return rejectWithValue;
+    return rejectWithValue('Failed to fetch users');
   }
 });
 
@@ -22,7 +21,18 @@ const usersSlice = createSlice({
   addUser: {
     reducer: {},
   },
-  extraReducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchUsers.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(fetchUsers.fulfilled, (state) => {
+      state.isLoading = false;
+    });
+    builder.addCase(fetchUsers.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
+  },
 });
 
 export const { addUser } = usersSlice.actions;
